@@ -1,0 +1,4 @@
+
+fpython:S1542	"IRename function "MAE" to match the regular expression ^[a-z_][a-z0-9_]*$.(ÓÇáôøÿÿÿÿ
+apython:S1542"IRename function "MSE" to match the regular expression ^[a-z_][a-z0-9_]*$.(Íœ˜½
+bpython:S1542"JRename function "RMSE" to match the regular expression ^[a-z_][a-z0-9_]*$.(Ã°…Ã

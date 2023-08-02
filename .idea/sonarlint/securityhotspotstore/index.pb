@@ -1,0 +1,13 @@
+
+<
+BeiJing.conf,8\9\8913064f0b33fef60365255bf9edf21c8821c0c5
+9
+	engine.py,d\e\deff733dd640e151116225d9bf8c70a47a6d1405
+=
+models/sgt.py,2\6\260ed31d754d80443f6a295d0b750c0a0a235530
+8
+utils.py,5\0\5031d0ea937a7fcbe0a14f778442700216efff7a
+7
+log.txt,8\9\89dbeb08d7aa865d748d706c1d17ee94f6f82ba7
+8
+train.py,e\0\e08b0eae9e8651539764474fc69e038ada65d8af

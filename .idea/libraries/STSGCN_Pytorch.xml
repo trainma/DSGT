@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="STSGCN_Pytorch">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/baseline.zip!/" />
+      <root url="jar://$PROJECT_DIR$/util.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="zlib123dllx64">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/data/TianJingAir/zlib123dllx64.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

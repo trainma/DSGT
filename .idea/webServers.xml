@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="500e8c0d-e957-442d-b339-6ec872e3acbb" name="SCI">
+        <fileTransfer rootFolder="/root" accessType="SFTP" host="10.20.207.64" port="22" sshConfigId="2986e6b7-50e5-4c27-83fb-0f280fc95520" sshConfig="xiahanzhong@10.20.207.64:22 agent" authAgent="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" isUseRsync="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="86282d0f-71f0-49bf-9b4d-0b2a9010203a" name="xiahanzhong@10.20.207.64:22" url="http:///">
+        <fileTransfer rootFolder="/home/xiahanzhong" accessType="SFTP" host="10.20.207.64" port="22" sshConfigId="2986e6b7-50e5-4c27-83fb-0f280fc95520" sshConfig="xiahanzhong@10.20.207.64:22 agent" authAgent="true" />
+      </webServer>
+    </option>
+  </component>
+</project>
