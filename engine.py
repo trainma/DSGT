@@ -43,7 +43,8 @@ class trainer():
                  test=None,
                  pre_graph=None,
                  in_dim=1,
-                 meter_flag=None ):
+                 meter_flag=None,
+                 weight_decay=1e-3):
         super(trainer, self).__init__()
         # Creating a model.
         pre_graph = torch.from_numpy(pre_graph).float().to(device)
@@ -51,14 +52,15 @@ class trainer():
                           seq_len=seq_len,
                           bn_decay=0.1,
                           nodes=num_of_vertices, d_model=d_model, dropout=dropout, pred_len=horizon, Satt=True,
-                          Tatt=True, pre_graph=pre_graph,meter_flag=meter_flag,in_dim=in_dim)
+                          Tatt=True, pre_graph=pre_graph, meter_flag=meter_flag, in_dim=in_dim,
+                          spatial_embed=spatial_emb, temporal_embed=temporal_emb)
         self.model.to(device)
         # self.model_parameters_init()
         self.optimizer = optim.Adam(
             self.model.parameters(),
             lr=lr,
-            eps=1.0e-8,
-            weight_decay=1e-4)
+            # eps=1.0e-8,
+            weight_decay=weight_decay)
 
         if lr_decay:
             lr_decay_steps = [
@@ -80,7 +82,7 @@ class trainer():
             utils.log_string(
                 log,
                 'GPU usage:{:,}'.format(torch.cuda.max_memory_allocated() /
-                                      1000000 if torch.cuda.is_available() else 0))
+                                        1000000 if torch.cuda.is_available() else 0))
 
     def model_parameters_init(self):
         for p in self.model.parameters():
@@ -113,7 +115,7 @@ class trainer():
                             input_meter, poiE)  # B, T, N
         predict = self.val_scaler.inverse_transform(output)  # B, T, N
         real_val = real_val.unsqueeze(-1)  # B, T, N, 1
-        mae = utils.masked_mae(predict, real_val, 0.0).item()
+        mae = utils.masked_mae(predict, real_val).item()
         mape = utils.masked_mape(predict, real_val, 0.0).item()
         rmse = utils.masked_rmse(predict, real_val, 0.0).item()
 
@@ -126,7 +128,7 @@ class trainer():
         predict = self.test_scaler.inverse_transform(output)  # B, T, N
         real_val = real_val.unsqueeze(-1)  # B, T, N, 1
 
-        mae = utils.masked_mae(predict, real_val, 0.0).item()
+        mae = utils.masked_mae(predict, real_val).item()
         mape = utils.masked_mape(predict, real_val, 0.0).item()
         rmse = utils.masked_rmse(predict, real_val, 0.0).item()
 

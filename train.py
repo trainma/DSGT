@@ -8,7 +8,7 @@ from engine import trainer
 from util.AirDataset import Air_dataset, read_poi_embedding
 from utils import *
 
-DATASET = "Tianjin"  # Beijing or Tianjin
+DATASET = "Beijing"  # Beijing or Tianjin
 config_file = f"./{DATASET}.conf"
 config = configparser.ConfigParser()
 config.read(config_file)
@@ -31,7 +31,7 @@ parser.add_argument("--temporal_emb", type=eval,
 parser.add_argument("--spatial_emb", type=eval, default=config["model"]["spatial_emb"],
                     help="whether to use spatial embedding", )
 parser.add_argument("--use_mask", type=eval, default=config["model"]["use_mask"],
-                    help="是否使用mask矩阵优化adj")
+                    help="whether to use mask matrix")
 parser.add_argument("--learning_rate", type=float, default=config["train"]["learning_rate"],
                     help="initial learning rate", )
 parser.add_argument("--lr_decay", type=eval, default=config["train"]["lr_decay"],
@@ -62,6 +62,7 @@ parser.add_argument("--max_grad_norm", type=float, default=config["train"]["max_
                     help="the max grad norm")
 parser.add_argument("--meter_flag", type=eval, default=config["train"]["meter_flag"],
                     help="whether to use meter data in training process")
+parser.add_argument("--weight_decay", type=int, default=config["train"]["weight_decay"])
 args = parser.parse_args()
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 curr_time = datetime.datetime.now()
@@ -71,7 +72,6 @@ log_string(log, str(args))
 
 
 def main() -> None:
-    global poi_file
     if DATASET == "Beijing":
         poi_file = './data/BeiJingAir/poi_embed2.txt'
         spatial_adj = pd.read_csv(
@@ -113,6 +113,8 @@ def main() -> None:
         pre_graph=spatial_adj,
         in_dim=args.in_dim,
         meter_flag=args.meter_flag,
+        weight_decay=args.weight_decay,
+
     )
     log_string(log, "Start training...")
     log_string(log, "=========================================")
@@ -123,7 +125,6 @@ def main() -> None:
     wait = 0
     val_mae_min = float("inf")
     val_rmse_min = float("inf")
-    best_model_wts = None
     for i in tqdm.tqdm(range(1, args.epochs + 1)):
         if wait >= args.patience:
             log_string(log, f"early stop at epoch: {i:04d}")
