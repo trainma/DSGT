@@ -2,14 +2,11 @@ import ast
 import configparser
 import time
 
-import pandas as pd
-
-import utils
-from models import SGT
+from util import utils
 from models.SGT import DSGT
 from util.AirDataset import Air_dataset
 from util.AirDataset import read_poi_embedding
-from utils import *
+from util.utils import *
 
 DATASET = "Beijing"  # BeijingAir or TianjingAir
 # config_file = f"./{DATASET}.conf"

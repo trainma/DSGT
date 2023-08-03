@@ -1,7 +1,7 @@
 import torch.optim as optim
 from model import *
-from models.SGT import SGT, DSGT
-import utils
+from models.SGT import DSGT
+from util import utils
 import numpy as np
 import torch
 

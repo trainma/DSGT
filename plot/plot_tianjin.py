@@ -1,11 +1,4 @@
-from utils import *
-import numpy as np
-import torch
-import pandas as pd
-import matplotlib.pyplot as plt
-import matplotlib as mpl
 import json
-import os
 
 if __name__ == "__main__":
     with open('./data/TianJingAir/TianJIng_station_distrcit.json', 'r') as f:

@@ -1,16 +1,13 @@
-import concurrent
-from concurrent.futures import ThreadPoolExecutor
-
 from models.Attention import gatedFusion, FC, SynorchouGraphAttention, temporalAttention, EncoderDecoderAttention
 from models.Embedding import PositionalEncoding, PTEmbedding
-from sts import *
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from models.AdaptiveGraphLearner import AdaptiveGraphLearner
-from utils import construct_dynamic_adj_1hop, construct_adj_local, construct_dynamic_adj_1hop_torch2, \
-    construct_dynamic_adj_lt, construct_adj_local_torch, \
-    construct_dynamic_adj_1hop_torch, construct_dynamic_adj_lt_torch, construct_dynamic_adj_lt_optimized
+from models.STS import MSTS_GCC, MSTS_GCC_dynamic_graph, MULTI_STS3
+from util.utils import construct_dynamic_adj_1hop_torch2, \
+    construct_adj_local_torch, \
+    construct_dynamic_adj_lt_optimized
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 

@@ -1,4 +1,3 @@
-import ast
 import configparser
 import datetime
 import time
@@ -6,7 +5,7 @@ import time
 import tqdm
 from engine import trainer
 from util.AirDataset import Air_dataset, read_poi_embedding
-from utils import *
+from util.utils import *
 
 DATASET = "Beijing"  # Beijing or Tianjin
 config_file = f"./{DATASET}.conf"

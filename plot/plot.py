@@ -1,12 +1,9 @@
-from utils import *
+from util.utils import *
 import numpy as np
 import torch
 import geopandas as gpd
 import pandas as pd
 import matplotlib.pyplot as plt
-import matplotlib as mpl
-import geopandas
-from adjustText import adjust_text
 
 import os
 os.environ['KMP_DUPLICATE_LIB_OK']='True'

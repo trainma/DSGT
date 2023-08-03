@@ -1,13 +1,11 @@
 # %%
 import numpy as np
-import torch
 import geopandas as gpd
-import pandas as pd
 import matplotlib.pyplot as plt
 real = np.load('./yreal.npy')
 predict = np.load('./yhat.npy')
 # %%
-from utils import *
+from util.utils import *
 
 mse = masked_mse(torch.from_numpy(predict), torch.from_numpy(real), 0.0).item()
 mae = masked_mae(torch.from_numpy(predict), torch.from_numpy(real), 0.0).item()
@@ -45,7 +43,7 @@ District = [DongCheng, XiCheng, ChaoYang, FengTai, ShiJingShan, HaiDing, MengTou
             Tongzhou, ShunYi, ChangPing, DaXing, HuaiRou, PingGu, MiYun, YanQing]
 
 # %%
-# °´DistrictÊý×é·Ö±ð¼ÆËã²»Í¬ÇøÓòÕ¾µãµÄÆ½¾ùÎó²î
+# ï¿½ï¿½Districtï¿½ï¿½ï¿½ï¿½Ö±ï¿½ï¿½ï¿½ã²»Í¬ï¿½ï¿½ï¿½ï¿½Õ¾ï¿½ï¿½ï¿½Æ½ï¿½ï¿½ï¿½ï¿½ï¿½
 District_mae = []
 District_rmse = []
 
@@ -59,11 +57,11 @@ for i in range(len(District)):
 # %%
 dis_mae = np.array(District_mae)
 dis_rmse = np.array(District_rmse)
-plt.rcParams['font.sans-serif'] = 'Microsoft YaHei'  # ÉèÖÃ×ÖÌåÎªÎ¢ÈíÑÅºÚ
-# Ê¹´òÓ¡Êä³öÏÔÊ¾¸üÈ«
+plt.rcParams['font.sans-serif'] = 'Microsoft YaHei'  # ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÎªÎ¢ï¿½ï¿½ï¿½Åºï¿½
+# Ê¹ï¿½ï¿½Ó¡ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½È«
 pd.set_option('display.max_columns', 500)
 pd.set_option('display.width', 1000)
-# ¶ÁÈ¡±±¾©geojsonÊý¾Ý
+# ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½geojsonï¿½ï¿½ï¿½ï¿½
 data = gpd.read_file('./data/BeiJingAir/BJ.json')
 print(data)
 

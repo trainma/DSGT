@@ -625,7 +625,7 @@ def load_dataset(dataset_dir,
             meter_std = data['x_meterlogical_train'].std()
 
         scaler = StandardScaler(mean, std)
-        meter_scaler = StandardScaler(meter_mean, meter_std)
+        meter_scaler = StandardScaler(meter_mean, meter_std)0
         print('Normalize the dataset by Standard Normalization')
 
     elif normalizer == 'None':
@@ -712,36 +712,6 @@ def masked_mape(preds, labels, null_val=np.nan):
         return np.mean(mape)
 
 
-# def masked_mape(preds, labels, null_val=np.nan):
-#     mask = ~torch.isnan(labels) if np.isnan(null_val) else labels != null_val
-#     mask = mask.float()
-#     mask /= torch.mean(mask)
-#     mask = torch.where(torch.isnan(mask), torch.zeros_like(mask), mask)
-#     loss = torch.abs(preds - labels) / labels
-#     loss = loss * mask
-#     loss = torch.where(torch.isnan(loss), torch.zeros_like(loss), loss)
-#     return torch.mean(loss)
-
-
-# def masked_r2_score(y_pred, y_true, null_val=np.nan):
-#     mask = ~torch.isnan(y_true) if np.isnan(null_val) else y_true != null_val
-#     mask = mask.float()
-#     mask /= torch.mean(mask)
-#     mask = torch.where(torch.isnan(mask), torch.zeros_like(mask), mask)
-#
-#     y_true_masked = y_true * mask
-#     y_pred_masked = y_pred * mask
-#     #flatten
-#     y_true_masked = torch.flatten(y_true_masked)
-#     y_pred_masked = torch.flatten(y_pred_masked)
-#
-#     ss_res = torch.sum((y_true_masked - y_pred_masked)**2)
-#     ss_tot = torch.sum((y_true_masked - torch.mean(y_true_masked))**2)
-#
-#     r2_score = 1 - (ss_res/ss_tot)
-#     r2_score = torch.where(torch.isnan(r2_score), torch.zeros_like(r2_score), r2_score)
-#
-#     return torch.mean(r2_score)
 
 def masked_r2_score(y_pred, y_true, null_val=np.nan):
     r2_score_list = []

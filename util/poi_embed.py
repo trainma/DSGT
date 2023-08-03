@@ -1,8 +1,6 @@
-import numpy as np
 import json
 import pandas as pd
-from utils import StandardScaler
-import matplotlib.pyplot as plt
+from util.utils import StandardScaler
 
 
 def poi_convert(pois_json='./data/BeiJingAir/Station_pois.json',
@@ -19,7 +17,7 @@ def poi_convert(pois_json='./data/BeiJingAir/Station_pois.json',
 if __name__ == '__main__':
     # poi_convert('./data/TianJingAir/TianJing_Station_pois.json', './data/TianJingAir/Station_pois.txt')
     # print(pois)
-    df = pd.read_csv('./data/TianJingAir/Station_pois.csv',
+    df = pd.read_csv('../data/TianJingAir/Station_pois.csv',
                      sep=' ', header=None)
     mean = df.iloc[:, 2].mean()
     std = df.iloc[:, 2].std()
