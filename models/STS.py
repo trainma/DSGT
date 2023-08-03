@@ -22,11 +22,6 @@ class gcn_operation(nn.Module):
             self.FC = nn.Linear(self.in_dim, self.out_dim, bias=True)
 
     def forward(self, x, mask=None):
-        """
-        :param x: (3*N, B, Cin)
-        :param mask:(3*N, 3*N)
-        :return: (3*N, B, Cout)
-        """
         adj = self.adj
         # if mask is not None:
         #     adj = adj.to(mask.device) * mask
@@ -502,11 +497,7 @@ class MSTS_GCC_dynamic_graph(nn.Module):
             nn.init.xavier_normal_(self.spatial_embedding, gain=0.0003)
 
     def forward(self, x, adj_list=None, mask=None):
-        """
-        self.spatial_embedding: [1 1 307 64]
-        self.temporal_embedding.shape [1 12 1 64]
-        x.shape [32 12 307 64] # 32个batch，12个时间步，307个节点，64个输入维度
-        """
+
         if self.temporal_emb:
             x = x + self.temporal_embedding
 
@@ -570,16 +561,7 @@ class MULTI_STS2(nn.Module):
             temporal_emb=True,
             spatial_emb=True,
     ):
-        """
-        :param adjList: 邻接矩阵
-        :param history: 输入时间步长
-        :param in_dim: 输入维度
-        :param out_dims: list 各个图卷积的输出维度
-        :param strides: 滑动窗口步长，local时空图使用几个时间步构建的，默认为3
-        :param num_of_vertices: 节点数量
-        :param activation: 激活方式 {'relu', 'GLU'}
 
-        """
         super(MULTI_STS2, self).__init__()
         self.adjList = adjList
         self.strides = strides
@@ -702,16 +684,7 @@ class MULTI_STS3(nn.Module):
             temporal_emb=True,
             spatial_emb=True,
     ):
-        """
-        :param adjList: 邻接矩阵
-        :param history: 输入时间步长
-        :param in_dim: 输入维度
-        :param out_dims: list 各个图卷积的输出维度
-        :param strides: 滑动窗口步长，local时空图使用几个时间步构建的，默认为3
-        :param num_of_vertices: 节点数量
-        :param activation: 激活方式 {'relu', 'GLU'}
 
-        """
         super(MULTI_STS3, self).__init__()
         self.adjList = adjList
         self.strides = strides
@@ -760,11 +733,7 @@ class MULTI_STS3(nn.Module):
             nn.init.xavier_normal_(self.spatial_embedding, gain=0.0003)
 
     def forward(self, x, mask=None):
-        """
-        self.spatial_embedding: [1 1 307 64]
-        self.temporal_embedding.shape [1 12 1 64]
-        x.shape [32 12 307 64] # 32个batch，12个时间步，307个节点，64个输入维度
-        """
+
         if self.temporal_emb:
             x = x + self.temporal_embedding
 
