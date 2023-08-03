@@ -27,13 +27,7 @@ def count_parameters(model):
 def init_seed(seed):
     """Disable cudnn to maximize reproducibility 禁用cudnn以最大限度地提高再现性"""
     torch.cuda.cudnn_enabled = False
-    """
-    cuDNN使用非确定性算法，并且可以使用torch.backends.cudnn.enabled = False来进行禁用
-    如果设置为torch.backends.cudnn.enabled =True，说明设置为使用使用非确定性算法
-    然后再设置：torch.backends.cudnn.benchmark = True，当这个flag为True时，将会让程序在开始时花费一点额外时间，
-    为整个网络的每个卷积层搜索最适合它的卷积实现算法，进而实现网络的加速
-    但由于其是使用非确定性算法，这会让网络每次前馈结果略有差异,如果想要避免这种结果波动，可以将下面的flag设置为True
-    """
+
     torch.backends.cudnn.deterministic = True
     random.seed(seed)
     np.random.seed(seed)
@@ -41,7 +35,7 @@ def init_seed(seed):
     torch.cuda.manual_seed(seed)
 
 
-"""图相关"""
+
 
 
 def get_adjacency_matrix(distance_df_filename,
@@ -746,14 +740,14 @@ if __name__ == '__main__':
     #                           valid_batch_size=64,
     #                           test_batch_size=64)
     # print(dataloader)
-    matrix = [[1, 1, 0, 1, 0, 1, 0, 0],
-              [1, 1, 1, 0, 0, 0, 0, 1],
-              [0, 1, 1, 0, 0, 0, 0, 0],
-              [1, 0, 0, 1, 1, 0, 0, 0],
-              [0, 0, 0, 1, 1, 0, 0, 0],
-              [1, 0, 0, 0, 0, 1, 1, 0],
-              [0, 0, 0, 0, 0, 1, 1, 0],
-              [0, 1, 0, 0, 0, 0, 0, 1]]
-    mt = np.array(matrix)
-    construct_dynamic_adj_lt(mt, 3)
-    construct_dynamic_adj_1hop(mt, 3)
+    # matrix = [[1, 1, 0, 1, 0, 1, 0, 0],
+    #           [1, 1, 1, 0, 0, 0, 0, 1],
+    #           [0, 1, 1, 0, 0, 0, 0, 0],
+    #           [1, 0, 0, 1, 1, 0, 0, 0],
+    #           [0, 0, 0, 1, 1, 0, 0, 0],
+    #           [1, 0, 0, 0, 0, 1, 1, 0],
+    #           [0, 0, 0, 0, 0, 1, 1, 0],
+    #           [0, 1, 0, 0, 0, 0, 0, 1]]
+    # mt = np.array(matrix)
+    # construct_dynamic_adj_lt(mt, 3)
+    # construct_dynamic_adj_1hop(mt, 3)
