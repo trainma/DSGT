@@ -8568,3 +8568,187 @@ Epoch: 015,  Start validation...
 Epoch: 010, Inference Time: 2.4887 secs
 Epoch: 010, Train Loss: 24.9301, Valid MAE: 29.4331, Valid MAPE: 0.7670, Valid RMSE: 42.4815, Training Time: 44.5878/epoch
 Epoch: 010,                     Test MAE: 24.2844 Test MAPE: 0.5772, Test RMSE: 33.4118
+Namespace(dataset='Tianjin', batch_size=128, num_of_vertices=27, in_dim=1, history=12, horizon=12, strides=3, temporal_emb=True, spatial_emb=True, use_mask=True, learning_rate=0.001, lr_decay=True, lr_decay_step='10,20,30,40,50,70', lr_decay_rate=0.5, epochs=100, print_every=10, save='./garage/Air/', expid=1, patience=10, log_file='./data/log_Air', num_workers=0, layers=2, d_model=32, dropout=0.3, max_grad_norm=5.0, meter_flag=False)
+model trainable parameter: 251,547
+GPU usage:1.87136
+Start training...
+=========================================
+compiling model...
+Start validation...
+Epoch: 001, Inference Time: 2.5219 secs
+Epoch: 001, Train Loss: 41.8708, Valid MAE: 31.3813, Valid MAPE: 0.8340, Valid RMSE: 42.7478, Training Time: 45.7598/epoch
+val rmse decrease from inf to 42.7478, save model to ./garage/Air/exp_1_31.38_42.75_best_model.pth
+Epoch: 001,                     Test MAE: 26.3707 Test MAPE: 0.5953, Test RMSE: 35.0522
+Start validation...
+Epoch: 002, Inference Time: 2.4955 secs
+Epoch: 002, Train Loss: 31.9674, Valid MAE: 29.2121, Valid MAPE: 0.7747, Valid RMSE: 41.2361, Training Time: 44.6156/epoch
+val rmse decrease from 42.7478 to 41.2361, save model to ./garage/Air/exp_1_29.21_41.24_best_model.pth
+Epoch: 002,                     Test MAE: 25.3394 Test MAPE: 0.5673, Test RMSE: 34.3086
+Start validation...
+Epoch: 003, Inference Time: 2.5241 secs
+Epoch: 003, Train Loss: 29.3006, Valid MAE: 29.2025, Valid MAPE: 0.7150, Valid RMSE: 40.4691, Training Time: 44.6000/epoch
+val rmse decrease from 41.2361 to 40.4691, save model to ./garage/Air/exp_1_29.2_40.47_best_model.pth
+Epoch: 003,                     Test MAE: 24.8747 Test MAPE: 0.5238, Test RMSE: 34.2423
+Start validation...
+Epoch: 004, Inference Time: 2.4892 secs
+Epoch: 004, Train Loss: 28.5825, Valid MAE: 28.2347, Valid MAPE: 0.7401, Valid RMSE: 39.8409, Training Time: 44.5303/epoch
+val rmse decrease from 40.4691 to 39.8409, save model to ./garage/Air/exp_1_28.23_39.84_best_model.pth
+Epoch: 004,                     Test MAE: 23.8053 Test MAPE: 0.5366, Test RMSE: 32.6045
+Start validation...
+Epoch: 005, Inference Time: 2.5085 secs
+Epoch: 005, Train Loss: 27.6489, Valid MAE: 29.1098, Valid MAPE: 0.8718, Valid RMSE: 40.5168, Training Time: 44.5247/epoch
+Epoch: 005,                     Test MAE: 24.7289 Test MAPE: 0.6317, Test RMSE: 32.9989
+Start validation...
+Epoch: 006, Inference Time: 2.5216 secs
+Epoch: 006, Train Loss: 26.7085, Valid MAE: 28.8778, Valid MAPE: 0.8526, Valid RMSE: 40.5465, Training Time: 44.5894/epoch
+Epoch: 006,                     Test MAE: 25.0549 Test MAPE: 0.6314, Test RMSE: 33.8794
+Start validation...
+Epoch: 007, Inference Time: 2.5037 secs
+Epoch: 007, Train Loss: 26.4812, Valid MAE: 28.3808, Valid MAPE: 0.7509, Valid RMSE: 40.3860, Training Time: 44.6314/epoch
+Epoch: 007,                     Test MAE: 23.6341 Test MAPE: 0.5671, Test RMSE: 32.3190
+Start validation...
+Epoch: 008, Inference Time: 2.5264 secs
+Epoch: 008, Train Loss: 25.7630, Valid MAE: 29.2759, Valid MAPE: 0.7841, Valid RMSE: 41.2610, Training Time: 44.7234/epoch
+Epoch: 008,                     Test MAE: 24.2712 Test MAPE: 0.6083, Test RMSE: 33.1995
+Start validation...
+Epoch: 009, Inference Time: 2.5145 secs
+Epoch: 009, Train Loss: 25.3436, Valid MAE: 29.6262, Valid MAPE: 0.8441, Valid RMSE: 41.1288, Training Time: 44.8427/epoch
+Epoch: 009,                     Test MAE: 25.8500 Test MAPE: 0.6696, Test RMSE: 35.1137
+Start validation...
+Epoch: 010, Inference Time: 2.5281 secs
+Epoch: 010, Train Loss: 24.5687, Valid MAE: 28.8263, Valid MAPE: 0.7972, Valid RMSE: 41.3501, Training Time: 44.8940/epoch
+Epoch: 010,                     Test MAE: 25.9107 Test MAPE: 0.6481, Test RMSE: 36.2254
+Start validation...
+Epoch: 011, Inference Time: 2.5087 secs
+Epoch: 011, Train Loss: 23.6436, Valid MAE: 30.5595, Valid MAPE: 0.8182, Valid RMSE: 43.1917, Training Time: 44.8753/epoch
+Epoch: 011,                     Test MAE: 25.6528 Test MAPE: 0.6451, Test RMSE: 35.7377
+Start validation...
+Epoch: 012, Inference Time: 2.5315 secs
+Epoch: 012, Train Loss: 23.1499, Valid MAE: 30.2016, Valid MAPE: 0.8037, Valid RMSE: 42.8247, Training Time: 44.7847/epoch
+Epoch: 012,                     Test MAE: 26.0391 Test MAPE: 0.6446, Test RMSE: 36.3989
+Start validation...
+Epoch: 013, Inference Time: 2.5054 secs
+Epoch: 013, Train Loss: 22.7528, Valid MAE: 31.1608, Valid MAPE: 0.8584, Valid RMSE: 44.0520, Training Time: 44.9209/epoch
+Epoch: 013,                     Test MAE: 27.1334 Test MAPE: 0.6894, Test RMSE: 37.6295
+Start validation...
+Epoch: 014, Inference Time: 2.5357 secs
+Epoch: 014, Train Loss: 22.6592, Valid MAE: 30.7940, Valid MAPE: 0.8357, Valid RMSE: 43.8183, Training Time: 44.8926/epoch
+Epoch: 014,                     Test MAE: 27.6081 Test MAPE: 0.6854, Test RMSE: 37.8559
+early stop at epoch: 0015
+Average Training Time: 44.7989 secs/epoch
+Average Inference Time: 2.5153 secs
+total time: 11.7min
+Namespace(dataset='Tianjin', batch_size=128, num_of_vertices=27, in_dim=1, history=12, horizon=12, strides=3, temporal_emb=True, spatial_emb=True, use_mask=True, learning_rate=0.001, lr_decay=True, lr_decay_step='10,20,30,40,50,70', lr_decay_rate=0.5, epochs=100, print_every=10, save='./garage/Air/', expid=1, patience=10, log_file='./data/log_Air', num_workers=0, layers=2, d_model=32, dropout=0.3, max_grad_norm=5.0, meter_flag=False)
+model trainable parameter: 251,547
+GPU usage:1.87136
+Start training...
+=========================================
+compiling model...
+Start validation...
+Epoch: 001, Inference Time: 2.4994 secs
+Epoch: 001, Train Loss: 40.5543, Valid MAE: 33.5790, Valid MAPE: 0.9528, Valid RMSE: 47.4371, Training Time: 45.5240/epoch
+val rmse decrease from inf to 47.4371, save model to ./garage/Air/exp_1_33.58_47.44_best_model.pth
+Epoch: 001,                     Test MAE: 27.4541 Test MAPE: 0.6315, Test RMSE: 36.9868
+Start validation...
+Epoch: 002, Inference Time: 2.4969 secs
+Epoch: 002, Train Loss: 31.4918, Valid MAE: 29.1507, Valid MAPE: 0.8348, Valid RMSE: 40.6975, Training Time: 44.3446/epoch
+val rmse decrease from 47.4371 to 40.6975, save model to ./garage/Air/exp_1_29.15_40.7_best_model.pth
+Epoch: 002,                     Test MAE: 27.4993 Test MAPE: 0.6284, Test RMSE: 37.0319
+Start validation...
+Epoch: 003, Inference Time: 2.5080 secs
+Epoch: 003, Train Loss: 29.5789, Valid MAE: 28.5456, Valid MAPE: 0.7835, Valid RMSE: 39.7522, Training Time: 44.5128/epoch
+val rmse decrease from 40.6975 to 39.7522, save model to ./garage/Air/exp_1_28.55_39.75_best_model.pth
+Epoch: 003,                     Test MAE: 25.0267 Test MAPE: 0.5570, Test RMSE: 34.1428
+Start validation...
+Epoch: 004, Inference Time: 2.4863 secs
+Epoch: 004, Train Loss: 28.6193, Valid MAE: 28.5464, Valid MAPE: 0.8421, Valid RMSE: 39.6967, Training Time: 44.5169/epoch
+val rmse decrease from 39.7522 to 39.6967, save model to ./garage/Air/exp_1_28.55_39.7_best_model.pth
+Epoch: 004,                     Test MAE: 25.2904 Test MAPE: 0.6096, Test RMSE: 34.0062
+Namespace(dataset='Beijing', batch_size=128, num_of_vertices=34, in_dim=1, history=12, horizon=12, strides=3, temporal_emb=True, spatial_emb=True, use_mask=True, learning_rate=0.001, lr_decay=True, lr_decay_step='10,20,40,60,80', lr_decay_rate=0.5, epochs=100, print_every=20, save='./garage/Air/', expid=1, patience=10, log_file='./data/log_Air', num_workers=0, layers=5, d_model=64, dropout=0.3, max_grad_norm=5.0, meter_flag=True)
+model trainable parameter: 1,430,907
+GPU usage:7.356416
+Start training...
+=========================================
+compiling model...
+Start validation...
+Epoch: 001, Inference Time: 11.1058 secs
+Epoch: 001, Train Loss: 36.5522, Valid MAE: 25.3371, Valid MAPE: 1.8037, Valid RMSE: 34.1574, Training Time: 167.5876/epoch
+val rmse decrease from inf to 34.1574, save model to ./garage/Air/exp_1_25.34_34.16_best_model.pth
+Epoch: 001,                     Test MAE: 20.2094 Test MAPE: 1.6249, Test RMSE: 27.9761
+Start validation...
+Epoch: 002, Inference Time: 11.1287 secs
+Epoch: 002, Train Loss: 21.5355, Valid MAE: 16.6145, Valid MAPE: 0.8624, Valid RMSE: 24.2266, Training Time: 168.0571/epoch
+val rmse decrease from 34.1574 to 24.2266, save model to ./garage/Air/exp_1_16.61_24.23_best_model.pth
+Epoch: 002,                     Test MAE: 13.7685 Test MAPE: 0.8158, Test RMSE: 20.1538
+Start validation...
+Epoch: 003, Inference Time: 11.1416 secs
+Epoch: 003, Train Loss: 18.4360, Valid MAE: 15.3542, Valid MAPE: 0.8172, Valid RMSE: 21.6333, Training Time: 167.3607/epoch
+val rmse decrease from 24.2266 to 21.6333, save model to ./garage/Air/exp_1_15.35_21.63_best_model.pth
+Epoch: 003,                     Test MAE: 12.3415 Test MAPE: 0.7549, Test RMSE: 17.9233
+Start validation...
+Epoch: 004, Inference Time: 11.1210 secs
+Epoch: 004, Train Loss: 17.3340, Valid MAE: 17.7814, Valid MAPE: 1.4773, Valid RMSE: 22.9648, Training Time: 167.0373/epoch
+Epoch: 004,                     Test MAE: 16.2170 Test MAPE: 1.3873, Test RMSE: 20.2120
+Start validation...
+Epoch: 005, Inference Time: 11.1155 secs
+Epoch: 005, Train Loss: 16.6533, Valid MAE: 14.7690, Valid MAPE: 0.9127, Valid RMSE: 21.3846, Training Time: 177.8986/epoch
+val rmse decrease from 21.6333 to 21.3846, save model to ./garage/Air/exp_1_14.77_21.38_best_model.pth
+Epoch: 005,                     Test MAE: 11.8532 Test MAPE: 0.8011, Test RMSE: 17.0973
+Start validation...
+Epoch: 006, Inference Time: 11.1441 secs
+Epoch: 006, Train Loss: 16.2757, Valid MAE: 15.5977, Valid MAPE: 1.1499, Valid RMSE: 21.2542, Training Time: 167.2560/epoch
+val rmse decrease from 21.3846 to 21.2542, save model to ./garage/Air/exp_1_15.6_21.25_best_model.pth
+Epoch: 006,                     Test MAE: 13.5171 Test MAPE: 1.0785, Test RMSE: 17.9063
+Start validation...
+Epoch: 007, Inference Time: 11.1245 secs
+Epoch: 007, Train Loss: 15.8845, Valid MAE: 14.7769, Valid MAPE: 0.9774, Valid RMSE: 21.1607, Training Time: 167.7777/epoch
+val rmse decrease from 21.2542 to 21.1607, save model to ./garage/Air/exp_1_14.78_21.16_best_model.pth
+Epoch: 007,                     Test MAE: 12.0091 Test MAPE: 0.8740, Test RMSE: 16.8488
+Start validation...
+Epoch: 008, Inference Time: 11.1195 secs
+Epoch: 008, Train Loss: 15.5973, Valid MAE: 14.2538, Valid MAPE: 0.6681, Valid RMSE: 20.9598, Training Time: 166.6154/epoch
+val rmse decrease from 21.1607 to 20.9598, save model to ./garage/Air/exp_1_14.25_20.96_best_model.pth
+Epoch: 008,                     Test MAE: 11.4018 Test MAPE: 0.6109, Test RMSE: 16.9325
+Start validation...
+Epoch: 009, Inference Time: 11.1172 secs
+Epoch: 009, Train Loss: 15.3726, Valid MAE: 13.8863, Valid MAPE: 0.7459, Valid RMSE: 20.6251, Training Time: 166.7436/epoch
+val rmse decrease from 20.9598 to 20.6251, save model to ./garage/Air/exp_1_13.89_20.63_best_model.pth
+Epoch: 009,                     Test MAE: 11.2486 Test MAPE: 0.6687, Test RMSE: 16.6951
+Start validation...
+Epoch: 010, Inference Time: 11.1405 secs
+Epoch: 010, Train Loss: 15.1483, Valid MAE: 14.5361, Valid MAPE: 0.9568, Valid RMSE: 20.5232, Training Time: 167.2626/epoch
+val rmse decrease from 20.6251 to 20.5232, save model to ./garage/Air/exp_1_14.54_20.52_best_model.pth
+Epoch: 010,                     Test MAE: 12.2490 Test MAPE: 0.8817, Test RMSE: 17.1237
+Start validation...
+Epoch: 011, Inference Time: 11.1454 secs
+Epoch: 011, Train Loss: 14.4745, Valid MAE: 17.5169, Valid MAPE: 1.3922, Valid RMSE: 23.4558, Training Time: 166.9523/epoch
+Epoch: 011,                     Test MAE: 16.1891 Test MAPE: 1.3375, Test RMSE: 20.6822
+Namespace(dataset='Beijing', batch_size=128, num_of_vertices=34, in_dim=1, history=12, horizon=24, strides=3, temporal_emb=True, spatial_emb=True, use_mask=True, learning_rate=0.001, lr_decay=True, lr_decay_step='10,20,40,60,80', lr_decay_rate=0.5, epochs=100, print_every=20, save='./garage/Air/', expid=1, patience=10, log_file='./data/log_Air', num_workers=0, layers=5, d_model=64, dropout=0.3, max_grad_norm=5.0, meter_flag=True, weight_decay=0.0001)
+model trainable parameter: 1,431,207
+GPU usage:7.35744
+Start training...
+=========================================
+compiling model...
+Start validation...
+Epoch: 001, Inference Time: 11.1690 secs
+Epoch: 001, Train Loss: 34.6431, Valid MAE: 25.1941, Valid MAPE: 1.7722, Valid RMSE: 31.9300, Training Time: 167.4342/epoch
+val rmse decrease from inf to 31.9300, save model to ./garage/Air/exp_1_25.19_31.93_best_model.pth
+Epoch: 001,                     Test MAE: 19.4963 Test MAPE: 1.5627, Test RMSE: 25.6270
+Start validation...
+Epoch: 002, Inference Time: 11.1175 secs
+Epoch: 002, Train Loss: 28.6997, Valid MAE: 23.9228, Valid MAPE: 1.7711, Valid RMSE: 30.7248, Training Time: 166.8300/epoch
+val rmse decrease from 31.9300 to 30.7248, save model to ./garage/Air/exp_1_23.92_30.72_best_model.pth
+Epoch: 002,                     Test MAE: 19.1838 Test MAPE: 1.6684, Test RMSE: 24.5646
+Start validation...
+Epoch: 003, Inference Time: 11.1100 secs
+Epoch: 003, Train Loss: 25.9089, Valid MAE: 21.6203, Valid MAPE: 1.3338, Valid RMSE: 28.8225, Training Time: 166.7483/epoch
+val rmse decrease from 30.7248 to 28.8225, save model to ./garage/Air/exp_1_21.62_28.82_best_model.pth
+Epoch: 003,                     Test MAE: 16.5640 Test MAPE: 1.2092, Test RMSE: 22.8979
+Start validation...
+Epoch: 004, Inference Time: 11.1249 secs
+Epoch: 004, Train Loss: 24.7530, Valid MAE: 22.5948, Valid MAPE: 1.7175, Valid RMSE: 29.4465, Training Time: 166.2267/epoch
+Epoch: 004,                     Test MAE: 18.3095 Test MAPE: 1.6299, Test RMSE: 23.7828
+Start validation...
+Epoch: 005, Inference Time: 11.1290 secs
+Epoch: 005, Train Loss: 23.9463, Valid MAE: 21.4991, Valid MAPE: 1.7354, Valid RMSE: 28.8494, Training Time: 166.7335/epoch
+Epoch: 005,                     Test MAE: 18.0230 Test MAPE: 1.5861, Test RMSE: 23.8071

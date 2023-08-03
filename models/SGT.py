@@ -167,7 +167,7 @@ class DSGT(nn.Module):
             dynamic_graph_list = self.Graph_construct(x)
             x = torch.cat([x, x_meter], dim=-1)
             # X = torch.cat([X, ME], dim=-1)
-            x = self.dropout(self.relu(self.EDLinear(x)))
+            x = self.EDLinear(x)
             PE = self.positional_encoding(x)
             # E_M = self.meter_embedding(x_meter)
             x = torch.add(x, PE)
