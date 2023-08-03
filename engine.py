@@ -40,7 +40,6 @@ class trainer():
                  horizon=12,
                  strides=3,
                  dropout=0.3,
-                 test=None,
                  pre_graph=None,
                  in_dim=1,
                  meter_flag=None,

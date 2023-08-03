@@ -54,7 +54,6 @@ parser.add_argument("--log_file", default=config["train"]["log_file"],
                     help="log file")
 parser.add_argument("--num_workers", type=int, default=config["train"]["num_workers"],
                     help="num workers")
-
 parser.add_argument("--layers", type=int, default=config["train"]["layers"])
 parser.add_argument("--d_model", type=int, default=config["model"]["d_model"])
 parser.add_argument("--dropout", type=eval, default=config["train"]["dropout"])
@@ -129,10 +128,7 @@ def main() -> None:
         if wait >= args.patience:
             log_string(log, f"early stop at epoch: {i:04d}")
             break
-        train_loss = []
-        train_mae = []
-        train_mape = []
-        train_rmse = []
+        train_loss, train_mae, train_mape, train_rmse = [], [], [], []
         t1 = time.time()
         # dataloader["train_loader"].shuffle()
         for _, (x, y, x_mark, y_mark, x_meter) in enumerate(train_loader):
