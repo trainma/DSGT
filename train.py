@@ -62,7 +62,7 @@ parser.add_argument("--max_grad_norm", type=float, default=config["train"]["max_
                     help="the max grad norm")
 parser.add_argument("--meter_flag", type=eval, default=config["train"]["meter_flag"],
                     help="whether to use meter data in training process")
-parser.add_argument("--weight_decay", type=int, default=config["train"]["weight_decay"])
+parser.add_argument("--weight_decay", type=eval, default=config["train"]["weight_decay"])
 args = parser.parse_args()
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 curr_time = datetime.datetime.now()
