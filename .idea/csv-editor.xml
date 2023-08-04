@@ -80,20 +80,6 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\plot\res\pred_beijing.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\plot\res\real_beijing.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
       </map>
     </option>
   </component>
