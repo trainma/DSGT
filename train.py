@@ -7,7 +7,7 @@ from engine import trainer
 from util.AirDataset import Air_dataset, read_poi_embedding
 from util.utils import *
 
-DATASET = "Beijing"  # Beijing or Tianjin
+DATASET = "Tianjin"  # Beijing or Tianjin
 config_file = f"./{DATASET}.conf"
 config = configparser.ConfigParser()
 config.read(config_file)

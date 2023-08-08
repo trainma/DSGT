@@ -619,7 +619,7 @@ def load_dataset(dataset_dir,
             meter_std = data['x_meterlogical_train'].std()
 
         scaler = StandardScaler(mean, std)
-        meter_scaler = StandardScaler(meter_mean, meter_std)0
+        meter_scaler = StandardScaler(meter_mean, meter_std)
         print('Normalize the dataset by Standard Normalization')
 
     elif normalizer == 'None':
@@ -725,29 +725,29 @@ def metric(pred, real):
     return mae, mape, rmse
 
 
-if __name__ == '__main__':
-    # adj = get_adjacency_matrix("./data/PEMS04/PEMS04.csv",
-    #                            307,
-    #                            id_filename=None)
-    # print(adj)
-    # A = construct_adj(adj, 3)
-    # print(A.shape)
-    # print(A)
-
-    # dataloader = load_dataset('./data/processed/PEMS04/',
-    #                           'std',
-    #                           batch_size=64,
-    #                           valid_batch_size=64,
-    #                           test_batch_size=64)
-    # print(dataloader)
-    # matrix = [[1, 1, 0, 1, 0, 1, 0, 0],
-    #           [1, 1, 1, 0, 0, 0, 0, 1],
-    #           [0, 1, 1, 0, 0, 0, 0, 0],
-    #           [1, 0, 0, 1, 1, 0, 0, 0],
-    #           [0, 0, 0, 1, 1, 0, 0, 0],
-    #           [1, 0, 0, 0, 0, 1, 1, 0],
-    #           [0, 0, 0, 0, 0, 1, 1, 0],
-    #           [0, 1, 0, 0, 0, 0, 0, 1]]
-    # mt = np.array(matrix)
-    # construct_dynamic_adj_lt(mt, 3)
-    # construct_dynamic_adj_1hop(mt, 3)
+# if __name__ == '__main__':
+#     # adj = get_adjacency_matrix("./data/PEMS04/PEMS04.csv",
+#     #                            307,
+#     #                            id_filename=None)
+#     # print(adj)
+#     # A = construct_adj(adj, 3)
+#     # print(A.shape)
+#     # print(A)
+#
+#     # dataloader = load_dataset('./data/processed/PEMS04/',
+#     #                           'std',
+#     #                           batch_size=64,
+#     #                           valid_batch_size=64,
+#     #                           test_batch_size=64)
+#     # print(dataloader)
+#     # matrix = [[1, 1, 0, 1, 0, 1, 0, 0],
+#     #           [1, 1, 1, 0, 0, 0, 0, 1],
+#     #           [0, 1, 1, 0, 0, 0, 0, 0],
+#     #           [1, 0, 0, 1, 1, 0, 0, 0],
+#     #           [0, 0, 0, 1, 1, 0, 0, 0],
+#     #           [1, 0, 0, 0, 0, 1, 1, 0],
+#     #           [0, 0, 0, 0, 0, 1, 1, 0],
+#     #           [0, 1, 0, 0, 0, 0, 0, 1]]
+#     # mt = np.array(matrix)
+#     # construct_dynamic_adj_lt(mt, 3)
+#     # construct_dynamic_adj_1hop(mt, 3)
